@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "plastic",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "site",
+    "binding": "ASSETS",
+    // the worker sees these first: page-view beacon and the private stats page
+    "run_worker_first": ["/api/*", "/stats"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "plastic-stats", "database_id": "13bb8d43-d32a-4d92-ad8e-057b6bfc1703" }
+  ]
+}

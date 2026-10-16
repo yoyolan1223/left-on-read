@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>給塑膠怪 — 所有訊息收在一起，幫你擬好回覆</title>
+  <meta name="description" content="不想再「塑膠」別人？給塑膠怪把 LINE、IG、Messenger、WhatsApp、LinkedIn、Gmail 的訊息收在一起，告訴你先回誰，每則都幫你擬好回覆，送出前給你確認。免費、開源的示範版。">
+  <meta name="keywords" content="統一收件匣, 訊息整合, AI 回覆, 已讀不回, 塑膠, LINE, IG 私訊, WhatsApp, Gmail, 陌生開發, 生產力, 開源">
+  <link rel="canonical" href="https://plastic.01-crumbs.workers.dev/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://plastic.01-crumbs.workers.dev/">
+  <link rel="alternate" hreflang="en" href="https://plastic.01-crumbs.workers.dev/en/">
+  <link rel="alternate" hreflang="x-default" href="https://plastic.01-crumbs.workers.dev/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://plastic.01-crumbs.workers.dev/">
+  <meta property="og:site_name" content="給塑膠怪">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="給塑膠怪 — 所有訊息收在一起，幫你擬好回覆">
+  <meta property="og:description" content="不想再「塑膠」別人？給塑膠怪把 LINE、IG、Messenger、WhatsApp、LinkedIn、Gmail 的訊息收在一起，告訴你先回誰，每則都幫你擬好回覆，送出前給你確認。免費、開源的示範版。">
+  <meta property="og:image" content="https://plastic.01-crumbs.workers.dev/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://plastic.01-crumbs.workers.dev/img/og.png">
+  <link rel="icon" href="img/icon.png">
+  <link rel="apple-touch-icon" href="img/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"給塑膠怪","alternateName":"Left on Read","applicationCategory":"CommunicationApplication","operatingSystem":"Web","url":"https://plastic.01-crumbs.workers.dev/","description":"不想再「塑膠」別人？給塑膠怪把 LINE、IG、Messenger、WhatsApp、LinkedIn、Gmail 的訊息收在一起，告訴你先回誰，每則都幫你擬好回覆，送出前給你確認。免費、開源的示範版。","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"sameAs":["https://github.com/yoyolan1223/left-on-read"]}</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <nav class="rail" aria-label="主選單">
+      <div class="rail-bag" id="railBag" title="小塑"></div>
+      <button class="rail-btn" data-tab="inbox"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>訊息</span></button>
+      <button class="rail-btn" data-tab="outbox"><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>待確認</span><i class="dot" id="outboxDot"></i></button>
+      <button class="rail-btn" data-tab="outreach"><svg viewBox="0 0 24 24"><circle cx="10" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c1-4 4-6 7-6s6 2 7 6M18 7v6M15 10h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>開發</span></button>
+      <button class="rail-btn" data-tab="settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>設定</span></button>
+      <button class="rail-lang" id="langBtn" title="Switch to English">EN</button>
+    </nav>
+    <section class="list" id="list"></section>
+    <main class="main" id="main"></main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+  <script src="track.js" defer></script>
+</body>
+</html>

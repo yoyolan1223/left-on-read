@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Left on Read — every inbox in one place, replies drafted for you</title>
+  <meta name="description" content="Stop leaving people on read. Left on Read pulls LINE, Instagram, Messenger, WhatsApp, LinkedIn and Gmail into one inbox, tells you who to answer first, and drafts every reply for you to check before it's sent. A free, open-source demo.">
+  <meta name="keywords" content="unified inbox, reply drafts, AI messaging assistant, left on read, LINE, Instagram DM, WhatsApp, Gmail, cold outreach, productivity, open source">
+  <link rel="canonical" href="https://plastic.01-crumbs.workers.dev/en/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://plastic.01-crumbs.workers.dev/">
+  <link rel="alternate" hreflang="en" href="https://plastic.01-crumbs.workers.dev/en/">
+  <link rel="alternate" hreflang="x-default" href="https://plastic.01-crumbs.workers.dev/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://plastic.01-crumbs.workers.dev/en/">
+  <meta property="og:site_name" content="Left on Read">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Left on Read — every inbox in one place, replies drafted for you">
+  <meta property="og:description" content="Stop leaving people on read. Left on Read pulls LINE, Instagram, Messenger, WhatsApp, LinkedIn and Gmail into one inbox, tells you who to answer first, and drafts every reply for you to check before it's sent. A free, open-source demo.">
+  <meta property="og:image" content="https://plastic.01-crumbs.workers.dev/img/og-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://plastic.01-crumbs.workers.dev/img/og-en.png">
+  <link rel="icon" href="../img/icon.png">
+  <link rel="apple-touch-icon" href="../img/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Left on Read","alternateName":"給塑膠怪","applicationCategory":"CommunicationApplication","operatingSystem":"Web","url":"https://plastic.01-crumbs.workers.dev/en/","description":"Stop leaving people on read. Left on Read pulls LINE, Instagram, Messenger, WhatsApp, LinkedIn and Gmail into one inbox, tells you who to answer first, and drafts every reply for you to check before it's sent. A free, open-source demo.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"sameAs":["https://github.com/yoyolan1223/left-on-read"]}</script>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <nav class="rail" aria-label="Main menu">
+      <div class="rail-bag" id="railBag" title="Baggy"></div>
+      <button class="rail-btn" data-tab="inbox"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Messages</span></button>
+      <button class="rail-btn" data-tab="outbox"><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Review</span><i class="dot" id="outboxDot"></i></button>
+      <button class="rail-btn" data-tab="outreach"><svg viewBox="0 0 24 24"><circle cx="10" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c1-4 4-6 7-6s6 2 7 6M18 7v6M15 10h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Outreach</span></button>
+      <button class="rail-btn" data-tab="settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Settings</span></button>
+      <button class="rail-lang" id="langBtn" title="切換成中文">中文</button>
+    </nav>
+    <section class="list" id="list"></section>
+    <main class="main" id="main"></main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="../app.js"></script>
+  <script src="../track.js" defer></script>
+</body>
+</html>
